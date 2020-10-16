@@ -127,6 +127,7 @@ sample_rules = [
     (symbol('N', 'Num'), [symbol('T', "9")])]
 
 sample_grammar = (symbol('N', 'Expr'), sample_rules[2:])
+sample_grammar2 = (symbol('N', 'Lvalue'), sample_rules[2:])
 
 
 def equal_second_elem_sets(a, b):
@@ -171,4 +172,5 @@ def filter_reachable(g):
 
 
 if __name__ == '__main__':
-    print(filter_reachable(sample_grammar))
+    print("Test 1", filter_reachable(sample_grammar))
+    print("Test 2", filter_reachable(sample_grammar2))
