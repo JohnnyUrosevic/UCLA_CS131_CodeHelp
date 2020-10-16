@@ -133,6 +133,10 @@ def equal_second_elem_sets(a, b):
     return equal_sets(a[1], b[1])
 
 def get_reachable_symbols(params):
+    # use a helper function so that we can call compute_fixed_point with the full grammar each time
+    return get_reachable_symbols_helper(params)
+
+def get_reachable_symbols_helper(params):
     rules, reachable_symbols = params
     if len(rules) == 0:
         return (rules, reachable_symbols)
